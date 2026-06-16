@@ -119,45 +119,32 @@
         }
 
         else {
-            if (Number(inputElement01) < 80 || Number(inputElement01) > 100) {
+            if (Number(inputElement01) < 0 || Number(inputElement01) > 100) {
 
-                checker.innerHTML = `number should not be lesser than 80 and greater than 100`
+                checker.innerHTML = 'number should not be lesser than 80 and greater than 100'
             }
-            else {
-                checker.innerHTML = 'your Grade is an A'
-            }
-
-            if (Number(inputElement01) < 70 || Number(inputElement01) >= 89) {
-
-            } else {
-                checker.innerHTML = 'your Grade is  B'
-                
-            }
+           else if (Number(inputElement01)  >= 80) {
+            checker.innerHTML = 'your Grade is A'
             
-            if (Number(inputElement01) < 60 || Number(inputElement01) >= 69) {
-                
-            } else {
-                checker.innerHTML = 'your Grade is C'
-                
-            }
-            if (Number(inputElement01) < 50 || Number(inputElement01) >= 59) {
-                
-            } else {
-                checker.innerHTML = 'your Grade is D'
-                
-            }
-            if (Number(inputElement01) < 0 || Number(inputElement01) >= 49) {
-                
-            } else {
-                checker.innerHTML = alert('your Grade is  F')
-                
-                
-            }
+           }
+           else if (Number(inputElement01) >= 70) {
+            checker.innerHTML = 'your Grade is B'
+            
+           }
+           else if (Number(inputElement01) >= 60) {
+            checker.innerHTML = 'your Grade is C'
+            
+           }
+           else if (Number(inputElement01) >= 50) {
+            checker.innerHTML = 'your Grade is D'
+            
+           }
+           else {
+            checker.innerHTML = 'your Grade is F'
+           }
         } 
 
-
-
-
+        inputElement.value = '' 
 
     }
 
